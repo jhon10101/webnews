@@ -1,12 +1,14 @@
 <?php
-
-             $search = "general"; // general, technology, business, sports
+     
+            $search = $_POST["keywords"];
+           // print_r($search);
+           //  $search = "business";
                     $queryString = http_build_query([
                         'access_key' => '0290ca8c586868f5d64f623b0fed4dd2',
-                     // 'keywords' => 'Wall street -wolf', // the word "wolf" will be
-                        'categories' => $search,
-                       // 'sort' => 'popularity',
-                        'countries' => 'gb, us, ar',
+                        'keywords' => $search, // the word "wolf" will be
+                      // 'categories' => 'general',
+                        'sort' => 'popularity',
+                        'countries' => 'us, gb, ca, mx',
                         'languages' => 'en, es',
                         'limit' => 100,
                        // 'source' => 'cnn, bbc, fox',
@@ -23,7 +25,6 @@
                     $apiResult = json_decode($json, true);
                     $jsonstring = $apiResult['data'];
 
-
-                  include 'news.php';
+                    include '../view/news.php';
                    
 ?>

@@ -4,7 +4,7 @@ $(function() {
     let category = "technology";
 
 
-     $.post('api-data.php', {category}, function (response) {
+     $.post('api/api-data.php', {category}, function (response) {
 
         $('#post').html(response);
        // console.log(response);
@@ -15,7 +15,7 @@ $(function() {
         let element = $(this)[0];
             let category = $(element).attr('categoryId');
 
-                $.post('api-data00.php', {category}, function (response) {
+                $.post('api/api-data00.php', {category}, function (response) {
 
                     $('#post').html(response);
                    // console.log(response);
@@ -30,7 +30,7 @@ $(function() {
         e.preventDefault();
         //console.log(postData);
         
-        $.post('api-data01.php', {keywords}, function(response) {
+        $.post('api/api-data01.php', {keywords}, function(response) {
             console.log(response);
             $('#post').html(response);
             $('#search').trigger('reset');

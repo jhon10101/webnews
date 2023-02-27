@@ -26,6 +26,6 @@
                     $jsonstring = $apiResult['data'];
 
 
-                  include 'news.php';
+                    include '../view/news.php';
                    
 ?>
