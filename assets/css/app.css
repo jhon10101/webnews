@@ -1,0 +1,23 @@
+a{
+    color: black;
+  }
+  
+  a:hover{
+    color: greenyellow;
+  }
+  
+  a:active{
+    color: green;
+  }
+
+  .fade-in-image {
+    opacity: 75%;
+  }
+  
+  .fade-in-image:hover {
+    opacity: 100%;
+    transition: opacity 1s;
+    border-color: white;
+  }
+
+

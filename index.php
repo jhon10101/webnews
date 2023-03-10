@@ -7,6 +7,8 @@
         <title>Web NEWS</title>
         <link rel="stylesheet" href="https://bootswatch.com/5/journal/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+        <link rel="stylesheet" href="assets/css/app.css">
+
         <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script> 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"></script>
@@ -15,7 +17,7 @@
 
        </head>
        <body>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-primary p-4">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-success p-4">
                 <div class="container-fluid">
                     <a class="navbar-brand categories" categoryId="general" href="#">NEWS</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,13 +62,20 @@
             <div class="container">
             <div class="jumbotron pb-2 ">
 
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                
                 <div  class="container" id="post"></div>
                
             </div>
         </div>
 
        </body>
-       <footer class="bg-primary text-center text-white">
+       <footer class="bg-success text-center text-white">
         <!-- Grid container -->
         <div class="container p-4 pb-0">
             <!-- Section: Social media -->
@@ -112,6 +121,19 @@
         </div>
         <!-- Copyright -->
         </footer>
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="..." alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="..." alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="..." alt="Third slide">
+    </div>
+  </div>
+</div>
        </html>
        
        

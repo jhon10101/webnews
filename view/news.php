@@ -9,7 +9,7 @@
                     $cabecera = 0;
                     $x = 8; # max cards
                     $max = 50;
-
+                    echo '<div class="carousel-inner">';
                       foreach ($jsonstring as $post) {
                         if ((!empty($post['image'])) && $max > $i) {
                             
@@ -23,10 +23,17 @@
                                   $originalDate = $post['published_at'];
                                   $newDate = date("Y-m-d", strtotime($originalDate));
                                   $i = 1 + $i;
+
+                                  
+                                  
                               if ($cabecera != 1){
-                                  $cabecera = 1;
-                                  $i = $i - 1;
-                                  echo '<div class="card-group p-3 bg-primary">';
+
+                                if($i == 1){
+                                  echo '<div class="carousel-item active">';
+                                }else{
+                                  echo '<div class="carousel-item">';
+                                }
+                                  echo '<div class="card-group p-3 bg-success fade-in-image">';
                                   echo '<div class="col-4 h-30 w-30 border-light">';
                                   echo '<img src="' . $post['image'] . '" class="card-img-top">';
                                   echo '</div>';
@@ -44,13 +51,32 @@
                                   echo '</div>';
                                   echo '</div>';
                                   echo '</div>';
-                                  echo '</div>'; // fin jumbotron
-                                  echo '</div>'; // fin container
-                                  echo '<div class="card-group p-3">';
+                                  echo '</div>';
+                                  if($i == 3){
+                                    $cabecera = 1;
+                                    $i = $i - 1;
+
+                                    echo '<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">';
+                                    echo '<span class="carousel-control-prev-icon" aria-hidden="true"></span>';
+                                    echo '<span class="sr-only">Previous</span>';
+                                    echo '</a>';
+                                    echo '<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">';
+                                    echo '<span class="carousel-control-next-icon" aria-hidden="true"></span>';
+                                    echo '<span class="sr-only">Next</span>';
+                                    echo '</a>';
+                                    echo '</div>';
+                                    
+                                    echo '</div>'; // fin jumbotron
+                                    echo '</div>'; // fin container
+                                    echo '<div class="card-group p-3">';
+
+                                  }
+
+                                  
                               }else{
                                 
-                                  echo '<div class="col-md-3 p-2 d-flex align-content-start flex-wrap">';
-                                  echo '<div class="card shadow-lg border-primary  h-100">';
+                                  echo '<div class="col-md-3 p-2 d-flex align-content-start flex-wrap fade-in-image">';
+                                  echo '<div class="card shadow-lg border-success h-100">';
                                   echo '<img src="' . $post['image'] . '" class="card-img-top">'; 
                                   echo '<div class="card-body">';
                                   echo '<h5 class="card-title"><a class="text-decoration-none" href="' . $post['url'] . '" target="_blank" rel="noopener noreferrer">' . $post['title'] . '</a></h5>';
