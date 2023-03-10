@@ -7,7 +7,7 @@
 
                     $i = 0;
                     $cabecera = 0;
-                    $x = 8; # max cards
+                    $x = 10; # max cards
                     $max = 50;
                     echo '<div class="carousel-inner">';
                       foreach ($jsonstring as $post) {
@@ -34,8 +34,8 @@
                                   echo '<div class="carousel-item">';
                                 }
                                   echo '<div class="card-group p-3 bg-success fade-in-image">';
-                                  echo '<div class="col-4 h-30 w-30 border-light">';
-                                  echo '<img src="' . $post['image'] . '" class="card-img-top">';
+                                  echo '<div class="col-md-4 border-light shadow-lg d-flex align-items-center">';
+                                  echo '<img src="' . $post['image'] . '" class="card-img  ">';
                                   echo '</div>';
                                   echo '<div class="card border-light shadow-lg col p-4  d-flex align-content-start flex-wrap">';                                          
 

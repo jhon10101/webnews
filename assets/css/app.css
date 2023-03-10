@@ -10,13 +10,11 @@ a{
     color: green;
   }
 
-  .fade-in-image {
-    opacity: 75%;
-  }
   
   .fade-in-image:hover {
     opacity: 100%;
     transition: opacity 1s;
+    background-color: green;
     border-color: white;
   }
 
