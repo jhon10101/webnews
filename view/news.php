@@ -9,7 +9,7 @@
                     $cabecera = 0;
                     $x = 10; # max cards
                     $max = 50;
-                    echo '<div class="carousel-inner">';
+                    echo '<div class="carousel-inner bg-success">';
                       foreach ($jsonstring as $post) {
                         if ((!empty($post['image'])) && $max > $i) {
                             
@@ -42,7 +42,7 @@
                                   echo '<div class="">';
                                   echo '<h4 class="card-title"><a class="text-decoration-none" href="' . $post['url'] . '" target="_blank" rel="noopener noreferrer">' . $post['title'] . '</a></h4>';
                                   echo '<h5"><b>'. $post['source'] .'</b></h5></br>';
-                                  echo '<div class="card-text">'. $post['description'] .'</div>';
+                                  echo '<div class=" text-justify  ">'. $post['description'] .'</div>';
                                   echo '<hr>';
                                   echo '<a href="#" class="categories badge bg-primary text-decoration-none" categoryId='. $post['category'] .'>'. $post['category'] .'</a>';
                                   echo '<a href="#" class="badge bg-info text-decoration-none">'. $post['language'] .'</a>';
